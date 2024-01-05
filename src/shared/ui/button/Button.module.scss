@@ -1,0 +1,17 @@
+.cardButton {
+	background-color: var(--colors-bt);
+	color: var(--colors-text);
+	align-self: center;
+	padding: 0.6rem 0.5rem;
+	border-radius: var(--radii);
+	font-weight: var(--fw-lightPlus);
+	transition: 0.2s;
+	white-space: nowrap;
+	&:hover {
+		background-color: #542d94;
+		transition: 0.2s;
+	}
+	&:active {
+		transform: scale(0.95);
+	}
+}

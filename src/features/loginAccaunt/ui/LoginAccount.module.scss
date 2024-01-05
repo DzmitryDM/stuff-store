@@ -1,0 +1,56 @@
+.authUserWrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.auth {
+	color: var(--colors-text);
+	padding: 0.8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--colors-bg);
+	width: 30%;
+	max-width: 33rem;
+  min-width: 15rem;
+	max-height: 30rem;
+	border-radius: var(--radii);
+    	> :not(:last-child) {
+		margin-bottom: 1.3rem;
+	}
+}
+.titleWrapper{
+  width: 100%;
+  display: flex;
+  align-items:center ;
+  justify-content: space-between;
+}
+.title {
+  font-weight: var(--fw-lightPlus);
+  margin-bottom: 0;
+}
+.closeAuth{
+  cursor: pointer;
+}
+
+
+
+
+.new {
+font-weight: var(--fw-light);
+}
+
+.register {
+  margin-left: 0.4rem;
+  color:var(--colors-bt);
+ font-weight: var(--fw-normal);
+ cursor: pointer;
+}

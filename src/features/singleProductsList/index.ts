@@ -1,0 +1,1 @@
+export {SingleProductList} from './ui/SingleProductsList'

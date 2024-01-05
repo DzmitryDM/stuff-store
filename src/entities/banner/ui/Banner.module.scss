@@ -1,0 +1,24 @@
+.home {
+	grid-area: home;
+	position: relative;
+	
+}
+.main_images {
+	width: 100%;
+	height: auto;
+}
+.images {
+	position: absolute;
+	max-width: 30rem;
+	bottom: -0.8rem;
+	right: 5rem;
+}
+@media (max-width: 1020px) {
+	.images {
+		max-width: 20rem;
+	}
+}
+.images2 {
+	max-width: 100%;
+	height: auto;
+}

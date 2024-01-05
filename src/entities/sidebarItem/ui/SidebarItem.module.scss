@@ -1,0 +1,14 @@
+.sidebarColor{
+	color:var(--colors-text);
+	transition: 0.5s;
+	padding: 0 0.4rem;
+	&:hover{
+		background-color: var(--colors-ui-base);
+	
+		border-radius: var(--radii);
+		transition: 0.5s;
+	}
+}
+.active{
+color:var(--colors-bt)
+}

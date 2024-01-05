@@ -1,0 +1,30 @@
+
+
+h3{
+  margin-bottom: 0.8rem;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-lightPlus);
+}
+.priceWrapper {
+  
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+}
+.price {
+	color: var(--colors-text);
+	max-width: 7.2rem;
+  margin-right: 0.3rem;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}

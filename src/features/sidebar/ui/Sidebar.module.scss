@@ -1,0 +1,23 @@
+.sidebar {
+	grid-area: sidebar;
+	background-color: var(--colors-bg);
+	padding: 1rem;
+	border-radius: 0.7rem;
+}
+h3{
+	font-size: 20px;
+font-weight: var(--fw-normal);
+}
+
+.categories {
+	line-height: 1.9rem;
+	font-size: 20px;
+	margin-bottom: 0.8rem;
+	font-weight: var(--fw-lightPlus);
+}
+.border {
+	border: 0.1px solid var(--colors-border);
+	box-shadow: var(--shadow);
+	margin-bottom: 0.8rem;
+
+}

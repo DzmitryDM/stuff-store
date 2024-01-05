@@ -1,0 +1,70 @@
+
+
+.basketContainer{
+background-color: var(--colors-ui-base);
+justify-content: space-between;
+margin-bottom: 1rem;
+align-items: center;
+border-radius: var(--radii);
+display: grid;
+grid-template-columns: 1fr 2fr 1fr 1.5fr 0.3fr;
+padding: 0.6rem;
+column-gap: 1rem;
+}
+
+.image {
+  cursor: pointer;
+	border-radius: var(--radii);
+	display: block;
+	width: 100px;
+	height: 80px;
+	object-fit: cover;
+	object-position: center;
+	box-shadow: var(--shadow);
+
+}
+.title {
+margin-bottom: 0.3rem;
+}
+.categories {
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-light);
+}
+.price {
+	display: grid;
+	white-space: nowrap;
+	color: var(--colors-bt);
+	font-size: 20px;
+}
+.quantityWrapper {
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	column-gap: 0.7rem;
+}
+.quantity {
+	display: flex;
+	justify-content: center;
+}
+.clear {
+	cursor: pointer;
+	transition: 0.2s;
+	&:hover{
+		transition: 0.2s;
+		color: rgba(248, 245, 245, 0.4);
+	}
+	&:active{
+transform: scale(.90);
+	}
+}
+.qty {
+	cursor: pointer;
+	transition: 0.2s;
+	&:hover{
+		transition: 0.2s;
+		color:rgba(255, 255, 255, 0.4);
+	}
+	&:active{
+		transform: scale(.90);
+	}
+}

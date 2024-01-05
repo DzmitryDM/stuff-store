@@ -1,0 +1,1 @@
+export { SingleProductElements } from './ui/SingleProductElements'

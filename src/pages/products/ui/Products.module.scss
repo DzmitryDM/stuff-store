@@ -1,0 +1,8 @@
+.productCard {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	grid-area: related;
+	padding-left: 0.8rem;
+	gap: 0.8rem;
+	font-weight: var(--fw-light);
+}

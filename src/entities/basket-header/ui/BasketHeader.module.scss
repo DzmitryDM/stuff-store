@@ -1,0 +1,10 @@
+.basketTop {
+	display: grid;
+	grid-template-columns: 1fr 1fr 5fr;
+	justify-items: end;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+.closeBasket {
+	cursor: pointer;
+}

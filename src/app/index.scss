@@ -1,0 +1,19 @@
+@import url('./styles/index.scss');
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Sofia+Sans:wght@300;500;700&display=swap");
+
+
+body {
+	margin: 0;
+	font-family: Montserrat, Roboto, sans-serif;
+	color: var(--colors-text);
+	font-weight: var(--fw-normal);
+	background-color: var(--colors-ui-base);
+}
+
+
+
+
+main {
+	flex: 1 1 auto;
+}

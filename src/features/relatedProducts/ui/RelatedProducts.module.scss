@@ -1,0 +1,7 @@
+.relatedProducts {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	grid-area: related;
+	gap: 0.8rem;
+	font-weight: var(--fw-light);
+}

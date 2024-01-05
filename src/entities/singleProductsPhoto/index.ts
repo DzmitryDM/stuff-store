@@ -1,0 +1,1 @@
+export {SingleProductsPhoto} from './ui/SingleProductsPhoto'

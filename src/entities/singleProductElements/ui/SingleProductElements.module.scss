@@ -1,0 +1,32 @@
+.productList {
+	padding: 2rem 2rem;
+	display: grid;
+	max-width: 100%;
+	grid-auto-flow: row;
+	grid-template: repeat(4, auto)/minmax(auto,30rem);
+	*{
+		margin-bottom: 0.3rem;
+	}
+}
+.productTitle{
+	font-size: var(--fs-md);
+	font-weight: var(--fw-normal);
+}
+
+.productDescription{
+		font-size: var(--fs-sm);
+	font-weight: var(--fw-light);
+}
+
+.cardBottom {
+	display: flex;
+	justify-content: space-between;
+}
+.cardPrice {
+	color: var(--colors-bt);
+	align-self: center;
+	font-size: 25px;
+	font-weight: var(--fw-lightPlus);
+	margin: 0;
+	margin-right: 2rem;
+}

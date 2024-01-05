@@ -1,0 +1,23 @@
+header {
+	padding: 2rem 1.3rem;
+	color: var(--colors-text);
+	background-color: var(--colors-ui-base);
+	box-shadow: var(--shadow);
+	margin-bottom: 1.9rem;
+}
+.logo {
+	max-width: 304px;
+}
+.flex_header {
+	display: flex;
+	justify-content: space-between;
+	justify-items: center;
+	align-items: center;
+}
+.container {
+	max-width: 1300px;
+	padding: 0 15px;
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+}

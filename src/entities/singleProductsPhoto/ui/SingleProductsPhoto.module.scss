@@ -1,0 +1,26 @@
+.singleWrapperImg {
+	display: flex;
+	gap: 0.6rem;
+	
+}
+
+.singleImage {
+	object-fit: cover;
+	object-position: center;
+	max-height: 350px;
+	max-width: 350px;
+	border-radius: var(--radii);
+	cursor: pointer;
+}
+
+.singleImages {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+.singleImages img {
+	max-width: 111px;
+	max-height: 111px;
+	border-radius: var(--radii);
+	cursor: pointer;
+}
