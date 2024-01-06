@@ -3,7 +3,7 @@ import { Products } from './products/index'
 import { Root } from './root'
 import { Home } from './home'
 import { SingleProducts } from './singleProducts'
-import { Pageses } from './Pageses'
+import { PersonalArea } from './personal-Area/ui/PersonalArea'
 
 export const router = createBrowserRouter([
 	{
@@ -24,8 +24,8 @@ export const router = createBrowserRouter([
 				element: <Products />,
 			},
 			{
-				path: '/pro',
-				element: <Pageses />,
+				path: '/personalArea',
+				element: <PersonalArea />,
 			},
 		],
 	},

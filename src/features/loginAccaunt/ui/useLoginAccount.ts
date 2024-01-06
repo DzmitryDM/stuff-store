@@ -1,14 +1,19 @@
-import { useRef } from "react";
-import { useClickOutside } from "../../../shared/hooks/useClickOutside";
+import { useRef, useState } from 'react'
+import { useClickOutside } from '../../../shared/hooks/useClickOutside'
 
+export const useLoginAccount = (
+	closeAuth: () => void
+): [React.RefObject<HTMLDivElement>, boolean, () => void] => {
+	const [isReg, setReg] = useState(false)
 
+	const toggleRegistration = () => {
+		setReg(!isReg)
+	}
 
-export const useLoginAccount =(closeAuth:()=>void)=>{
-  
-  const ref = useRef<HTMLDivElement>(null)
-    useClickOutside(ref, () => {
-      closeAuth()
-    })
+	const ref = useRef<HTMLDivElement>(null)
+	useClickOutside(ref, () => {
+		closeAuth()
+	})
 
-    return [ref]
+	return [ref, isReg, toggleRegistration]
 }

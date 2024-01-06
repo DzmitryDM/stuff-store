@@ -1,12 +1,11 @@
 import { FieldErrors, SubmitHandler, UseFormHandleSubmit, UseFormRegister, useForm } from "react-hook-form"
-import { useAppDispatch, useAppSelector } from "../../../shared/hooks-redux/hooksRedux"
-import { selectAuthError, selectAuthUser } from "../../../shared/model/auth-slice/selectAuth"
+import { useAppDispatch } from "../../../shared/hooks-redux/hooksRedux"
 import { IRegistrationUser } from "../../../shared/type/auth"
 import { authUser, registrationUser } from "../../../shared/model/auth-slice/authSlice"
 
 
 export const useRegisterForm = (
-	isReg: boolean
+	isReg: boolean,
 ): [
 	SubmitHandler<IRegistrationUser>,
 	RegExp,
@@ -33,7 +32,6 @@ boolean
 		}
 		if (!isReg) {
 			dispatch(authUser(dataAuth))
-			// closeAuth()
 		} else {
 			dispatch(registrationUser(data))
 		}

@@ -10,16 +10,16 @@ import axios from 'axios'
 import apiAuth from '../../config-api/instanceAxios'
 
 export interface IAuthSlice {
-	isAuth: false
+	isAuth: boolean
 	user: IAuthUser | null
 	error: null | any
 }
 
 export const registrationUser = createAsyncThunk(
-	'register/User',
+	'registration/registrationUser',
 	async (newUser: IRegistrationUser, { rejectWithValue }) => {
 		try {
-			axios.post(registrationProfile, newUser)
+		axios.post(registrationProfile, newUser)
 		} catch (error) {
 			return rejectWithValue(error)
 		}
@@ -27,7 +27,7 @@ export const registrationUser = createAsyncThunk(
 )
 
 export const authUser = createAsyncThunk(
-	'register/authUser',
+	'registration/authUser',
 	async (auth: IRegistrationUser, { rejectWithValue, dispatch }) => {
 		try {
 			const res = await apiAuth.post(authUserLogin, auth)
@@ -40,7 +40,7 @@ export const authUser = createAsyncThunk(
 )
 
 export const checkAuth = createAsyncThunk(
-	'register/checkAuth',
+	'registration/checkAuth',
 	async (_, { rejectWithValue }) => {
 		try {
 			const profile = await apiAuth.get(authProfile)
@@ -51,38 +51,59 @@ export const checkAuth = createAsyncThunk(
 	}
 )
 
-
 const initialState: IAuthSlice = {
 	isAuth: false,
 	user: null,
 	error: null,
+
 }
 
-const registerSlice = createSlice({
-	name: 'register',
+const authSlice = createSlice({
+	name: 'registration',
 	initialState,
 	reducers: {
 		logout: () => {
 			localStorage.removeItem('token')
 			return initialState
 		},
+		setAuth: state => {
+			state.isAuth = !state.isAuth
+		},
 	},
 
 	extraReducers: builder => {
+		//Registration
+		builder.addCase(registrationUser.pending, (state) => {
+			state.isAuth = true
+			state.error = null
+		})
+		builder.addCase(registrationUser.fulfilled, (state) => {
+			state.isAuth = false
+		})
 		builder.addCase(registrationUser.rejected, (state, action) => {
 			state.error = action.payload
 		})
+		//AuthUser
+		builder.addCase(authUser.pending, (state) => {
+			state.isAuth = true
+			state.error = null
+		})
+		builder.addCase(authUser.fulfilled, (state, action) => {
+			state.error = action.payload
+			state.isAuth = false
+		})
+		builder.addCase(authUser.rejected, (state, action) => {
+			state.error = action.payload
+		})
+		//CheckAuth
 		builder.addCase(checkAuth.fulfilled, (state, action) => {
 			if (action.payload) state.user = action.payload.data
 		})
 		builder.addCase(checkAuth.rejected, (state, action) => {
 			state.error = action.payload
 		})
-		builder.addCase(authUser.rejected, (state, action) => {
-			state.error = action.payload
-		})
 	},
 })
 
-export const registerReducer = registerSlice.reducer
-export const { logout } = registerSlice.actions
+export const registerReducer = authSlice.reducer
+export const { logout, setAuth } = authSlice.actions

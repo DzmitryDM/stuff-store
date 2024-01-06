@@ -10,8 +10,8 @@ interface ILoginAccount {
 }
 
 export function LoginAccount({ closeAuth }: ILoginAccount) {
-	const [ref] = useLoginAccount(closeAuth)
-	const [isReg, setReg] = useState(false)
+	const [ref, isReg, toggleRegistration] = useLoginAccount(closeAuth)
+
 
 	return (
 		<motion.div
@@ -29,10 +29,10 @@ export function LoginAccount({ closeAuth }: ILoginAccount) {
 					</h3>
 					<MdClear className={styles.closeAuth} onClick={closeAuth} size={23} />
 				</div>
-				<RegisterForm  isReg={isReg} />
+				<RegisterForm isReg={isReg} />
 				<div className={styles.new}>
 					{!isReg && 'New user?'}
-					<span onClick={() => setReg(!isReg)} className={styles.register}>
+					<span onClick={toggleRegistration} className={styles.register}>
 						{!isReg ? 'Register' : 'Log in'}
 					</span>
 				</div>
