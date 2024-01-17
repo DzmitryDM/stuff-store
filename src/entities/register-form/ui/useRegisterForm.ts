@@ -22,7 +22,7 @@ boolean
 		formState: { errors, isValid },
 		reset,
 	} = useForm<IRegistrationUser>({
-		mode: 'onBlur',
+		mode: "onBlur",
 	})
 
 	const onSubmit: SubmitHandler<IRegistrationUser> = data => {

@@ -13,5 +13,8 @@ export function PersonalArea() {
 			navigate('/')
 		}
 	}, [user])
-	return <div>PersonalArea</div>
+
+
+
+	return <div>PersonalArea {user?.name}</div>
 }

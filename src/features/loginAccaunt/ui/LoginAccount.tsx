@@ -2,15 +2,16 @@ import { MdClear } from 'react-icons/md'
 import styles from './LoginAccount.module.scss'
 import { motion } from 'framer-motion'
 import { useLoginAccount } from './useLoginAccount'
-import { useState } from 'react'
 import { RegisterForm } from '../../../entities/register-form'
 
 interface ILoginAccount {
 	closeAuth: () => void
+	error:any
 }
 
-export function LoginAccount({ closeAuth }: ILoginAccount) {
-	const [ref, isReg, toggleRegistration] = useLoginAccount(closeAuth)
+export function LoginAccount({ closeAuth,error=null}: ILoginAccount) {
+	const [ref, isReg, toggleRegistration] = useLoginAccount(closeAuth,error)
+
 
 
 	return (
@@ -30,6 +31,7 @@ export function LoginAccount({ closeAuth }: ILoginAccount) {
 					<MdClear className={styles.closeAuth} onClick={closeAuth} size={23} />
 				</div>
 				<RegisterForm isReg={isReg} />
+				{error && <div className={styles.errorAuth}>Wrong login or password!</div>}
 				<div className={styles.new}>
 					{!isReg && 'New user?'}
 					<span onClick={toggleRegistration} className={styles.register}>

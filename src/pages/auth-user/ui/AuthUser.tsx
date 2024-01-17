@@ -6,11 +6,11 @@ import { createPortal } from 'react-dom'
 import { useAuthUser } from './useAuthUser'
 
 
-export function AuthUser() {
+export  function AuthUser() {
 
-const [isAuth,user,error, isOpen, closeAuth, pages, signOut] =
+const [isAuth, user, error, isOpen, idRegistered, closeAuth, pages, signOut] =
 	useAuthUser()
-console.log('render AUTH');
+console.log(error);
 
 	return (
 		<>
@@ -25,7 +25,7 @@ console.log('render AUTH');
 			</div>
 			{createPortal(
 				<AnimatePresence>
-					{!user && isOpen && <LoginAccount closeAuth={closeAuth} />}
+					{!user && isOpen && <LoginAccount closeAuth={closeAuth} error={error}  />}
 				</AnimatePresence>,
 				document.body
 			)}

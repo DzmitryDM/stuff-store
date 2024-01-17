@@ -7,7 +7,9 @@ import { SingleProductsPhoto } from '../../../entities/singleProductsPhoto'
 export function SingleProductList() {
 	const { idProduct } = useParams<{ idProduct: any }>()
 
-	const { data, isSuccess, isError } = useGetSingleProductsQuery(idProduct)
+	const { data, isSuccess, isError, } = useGetSingleProductsQuery(idProduct)
+
+
 
 	return (
 		<>

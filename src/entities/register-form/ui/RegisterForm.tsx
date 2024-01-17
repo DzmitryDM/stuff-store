@@ -10,7 +10,6 @@ export function RegisterForm({  isReg }: IRegisterForm) {
 
 	const [onSubmit, EMAIL_REGEXP, register, handleSubmit, errors, isValid] =
 		useRegisterForm(isReg)
-
 	console.log('render REGISTERFORM')
 
 	return (

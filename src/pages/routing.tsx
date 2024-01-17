@@ -23,10 +23,10 @@ export const router = createBrowserRouter([
 				path: `/products/:idProducts`,
 				element: <Products />,
 			},
-			{
-				path: '/personalArea',
-				element: <PersonalArea />,
-			},
 		],
+	},
+	{
+		path: '/personalArea',
+		element: <PersonalArea />,
 	},
 ])

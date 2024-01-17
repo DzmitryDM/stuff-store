@@ -9,7 +9,8 @@ export const Products = memo(  function Products() {
  
 return (
 		<>
-		{isSuccess && (
+		{!products.length && 'There are no products for this category '}
+		{isSuccess && products && (
 		<div className={styles.productsContainer}>
 				<div className={styles.productCard}>
 					{ products.map(product => (
