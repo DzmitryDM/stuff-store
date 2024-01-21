@@ -24,6 +24,7 @@ export const useSearch = (): [
 	
 
 		const handleSearch: onSearch = e => {
+			e.preventDefault()
 			setValue(e.target.value)
 		}
 	
