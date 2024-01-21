@@ -1,0 +1,21 @@
+.basket {
+	max-height: 95vh;
+	max-width: 90%;
+	background-color: var(--colors-bg);
+	border-radius: var(--radii);
+	padding: 0.8rem;
+	overflow-y: auto;
+}
+.basketWrapper {
+	transition: 0.9s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.5);
+}

@@ -1,10 +1,35 @@
-header {
+.headerContainer {
 	padding: 2rem 1.3rem;
 	color: var(--colors-text);
 	background-color: var(--colors-ui-base);
 	box-shadow: var(--shadow);
 	margin-bottom: 1.9rem;
 }
+@media(max-width:810px){
+.headerContainer{
+	padding: 1rem 0.2rem;
+	height: 4rem;
+}
+}
+	.searchLogo {
+	cursor: pointer;
+}
+.burgerMenu {
+	cursor: pointer;
+}
+@media(min-width:810px) {
+	.searchLogo {
+	display: none;
+	cursor: pointer;
+}
+
+.burgerMenu {
+	display: none;
+	cursor: pointer;
+}
+}
+
+
 .logo {
 	max-width: 304px;
 }

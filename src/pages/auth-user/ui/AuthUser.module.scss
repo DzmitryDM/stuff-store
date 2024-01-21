@@ -1,26 +1,25 @@
 .userProfile {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
 	z-index: 1;
-    position: relative;
+	position: relative;
 }
 .avatar {
-  width: 2.5rem;
-height: 2.5rem;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 0.7rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-right: 0.7rem;
 }
 .email {
-
 }
 .personalArea {
-  position: absolute;
-  top: 3rem;
-  left: 0;
-  width: 5.3rem;
-  background-color: var(--colors-bg);
-  padding: 0.4rem;
-  border-radius: var(--radii);
+	position: absolute;
+	top: 3rem;
+	left: 0;
+	width: 5.3rem;
+	background-color: var(--colors-bg);
+	padding: 0.4rem;
+	border-radius: var(--radii);
 }

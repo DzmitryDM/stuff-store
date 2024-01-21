@@ -21,3 +21,9 @@ font-weight: var(--fw-normal);
 	margin-bottom: 0.8rem;
 
 }
+
+@media(max-width:810px){
+.sidebar{
+	display: none;
+}
+}

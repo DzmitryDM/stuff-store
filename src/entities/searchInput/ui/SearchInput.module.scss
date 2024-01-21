@@ -1,0 +1,62 @@
+.inputWrapper {
+	position: relative;
+	border-radius: var(--radii);
+	background-color: var(--colors-bg);
+	padding: 0.3rem;
+	display: flex;
+	box-shadow: var(--shadow);
+}
+
+
+
+.searchIcons {
+	width: 20px;
+	height: 20px;
+	opacity: 0.6;
+}
+.input {
+	background-color: var(--colors-bg);
+	padding: 0 1rem;
+	color: var(--colors-text);
+	align-content: center;
+	line-height: 1.7rem;
+	width: 100%;
+}
+.box {
+	z-index: 9;
+	top: 120%;
+	position: absolute;
+	max-width: 100%;
+	left: 0;
+	max-height: 300px;
+	overflow-y: auto;
+	padding: 0.7rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.6rem;
+	background: var(--colors-bg);
+	border-radius: 8px;
+}
+
+.item {
+	font-size: 13px;
+	color: var(--colors-text);
+	display: flex;
+	align-items: center;
+	column-gap: 1.1rem;
+	transition: 0.5s;
+	&:hover {
+		background-color: var(--colors-ui-base);
+		border-radius: var(--radii);
+		transition: 0.5s;
+	}
+}
+
+.item .image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 6px;
+	max-width: 50px;
+	max-height: 50px;
+}

@@ -1,11 +1,9 @@
 import { MdClear } from 'react-icons/md'
 import { Button } from '../../../shared/ui'
 import styles from './BasketHeader.module.scss'
+import { IBasketHeaderType } from '../../../shared/type/basket'
 
-interface IBasketHeaderType {
-	clearCart: () => void
-	closeCart: () => void
-}
+
 
 
 

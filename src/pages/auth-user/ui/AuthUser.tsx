@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import { LoginAccount } from '../../../features/loginAccaunt'
 import { createPortal } from 'react-dom'
 import { useAuthUser } from './useAuthUser'
-
+import { TbBrandOauth } from 'react-icons/tb'
 
 export  function AuthUser() {
 
@@ -16,7 +16,7 @@ console.log(error);
 		<>
 			<div onClick={!user ? closeAuth : pages} className={styles.userProfile}>
 				{user && <img className={styles.avatar} src={user?.avatar} alt='' />}
-				<div className={styles.email}>{user ? user?.name : 'Sign in'}</div>
+				<div className={styles.email}>{user ? user?.name : <TbBrandOauth size='27'/>}</div>
 				{user && (
 						<div className={styles.personalArea} onClick={signOut}>
 							Sign out
