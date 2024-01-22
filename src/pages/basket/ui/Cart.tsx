@@ -22,7 +22,7 @@ const fnBasketHeader = {
 				<FaCartShopping size='27px' />
 			</div>
 
-				<AnimatePresence>
+				<AnimatePresence initial={false}>
 					{isOpen && (
 						<BasketWrapper refOpen={ref} fnBasketHeader={fnBasketHeader} />
 					)}
