@@ -20,12 +20,7 @@ const refSearch = useRef(null)
 		<>
 			<AnimatePresence>
 				{isSearch && (
-					<motion.div
-						key='wrapper'
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-						transition={{ duration: 0.2 }}
+					<div
 						className={styles.searchWrapper}
 					>
 						<motion.div
@@ -44,7 +39,7 @@ const refSearch = useRef(null)
 								size='30'
 							/>
 						</motion.div>
-					</motion.div>
+					</div>
 				)}
 			</AnimatePresence>
 			<SearchInput searchVisible={styles.searchHidden} />

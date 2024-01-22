@@ -4,14 +4,10 @@ import { Input } from '../../../shared/ui'
 import { Link } from 'react-router-dom'
 import { useSearch } from '../../searchInput/ui/useSearch'
 import { AnimatePresence, motion } from 'framer-motion'
-import { MdClear } from 'react-icons/md'
 
 interface ISearchVisible {
 	searchVisible:string
 }
-
-
-
 
 export function SearchInput({searchVisible}:ISearchVisible) {
 
