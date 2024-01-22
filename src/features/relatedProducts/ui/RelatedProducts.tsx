@@ -16,7 +16,7 @@ const [products, error, isLoading, isSuccess] = useRelatedProducts()
 			{error && <div>Error...</div>}
 			{isSuccess && (
 				<section className={styles.relatedProducts}>
-					{products.map((products,i) => (
+					{products.map((products, i) => (
 						<ProductsItem key={products.id} {...products} />
 					))}
 				</section>

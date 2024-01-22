@@ -13,3 +13,11 @@
 .price {
 	color: var(--colors-bt);
 }
+
+@media (max-width:768px) {
+	.totalPrice{
+		font-size: 14px;
+	}.price{
+		font-size: 14px;
+	}
+}

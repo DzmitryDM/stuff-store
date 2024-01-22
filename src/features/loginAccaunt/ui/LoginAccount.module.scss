@@ -27,6 +27,11 @@
 		margin-bottom: 1.3rem;
 	}
 }
+@media(max-width:768px) {
+	.auth{
+		width: 92%;
+	}
+}
 .titleWrapper{
   width: 100%;
   display: flex;

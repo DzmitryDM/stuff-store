@@ -26,7 +26,7 @@ return () => clearTimeout(timer)
 			{alertName && (
 				<motion.div
 					className={styles.popPup}
-					style={{ position: 'fixed', top: '88px', right: '30px' }}
+					// style={{ position: 'fixed', top: '88px', right: '30px' }}
 					key='pop'
 					initial={{ x: 600 }}
 					animate={{ x: 0 }}
