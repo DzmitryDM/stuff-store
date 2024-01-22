@@ -9,32 +9,34 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import { BsSearch } from 'react-icons/bs'
 import { log } from 'console'
 import { useState } from 'react'
+import { useHeader } from './useHeader'
+import { Sidebar } from '../../sidebar'
+import { AnimatePresence } from 'framer-motion'
 
 				export function Header() {
 
-const [isOpenSearch,setOpenSearch]=useState(false)
-
-const openSearch=()=>{
-	setOpenSearch(!isOpenSearch)																			
-}
+const [isOpenSearch, isOpenMenu, handleMenuBurger, handleSearch] = useHeader()
 
 	return (
 		<header className={styles.headerContainer}>
 			<div className={styles.container}>
 				<div className={styles.flex_header}>
-					<RxHamburgerMenu className={styles.burgerMenu} size='27' />
+					<RxHamburgerMenu
+						onClick={handleMenuBurger}
+						className={styles.burgerMenu}
+						size='27'
+					/>
 					<div className={styles.logo}>
 						<Link to={'/'}>
 							<img src={logo} alt='logo' />
 						</Link>
 					</div>
 					<BsSearch
-						onClick={openSearch}
+						onClick={handleSearch}
 						className={styles.searchLogo}
 						size='27'
 					/>
-					<Search  isSearch={isOpenSearch} openSearch={openSearch} />
-								
+					<Search isSearch={isOpenSearch} openSearch={handleSearch} />
 					<AuthUser />
 					<ThemeSwitcher />
 					<Cart />

@@ -1,4 +1,3 @@
-import { BsSearch } from 'react-icons/bs'
 import { SearchInput } from '../../searchInput'
 import styles from './Search.module.scss'
 import { AnimatePresence, motion } from 'framer-motion'

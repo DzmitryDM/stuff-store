@@ -10,7 +10,6 @@ export  function AuthUser() {
 
 const [isAuth, user, error, isOpen, idRegistered, closeAuth, pages, signOut] =
 	useAuthUser()
-console.log(error);
 
 	return (
 		<>
