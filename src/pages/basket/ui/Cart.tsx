@@ -8,14 +8,13 @@ import { BasketFooter } from '../../../entities/basket-footer'
 import { BasketList } from '../../../features/basketList'
 import { BasketWrapper } from '../../../features/basketWarapper'
 
-
 export function Cart() {
-	const [products, isOpen, closeCart,  clearCart, ref] = useCart()
+	const [products, isOpen, closeCart, clearCart, ref] = useCart()
 
-const fnBasketHeader = {
-	closeCart, clearCart
-}
-
+	const fnBasketHeader = {
+		closeCart,
+		clearCart,
+	}
 
 	return (
 		<>
@@ -26,7 +25,16 @@ const fnBasketHeader = {
 			{createPortal(
 				<AnimatePresence>
 					{isOpen && (
-						<BasketWrapper refOpen={ref} fnBasketHeader={fnBasketHeader} />
+						<motion.div
+							className={styles.basketWrapper}
+							key='basket'
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{ opacity: 0 }}
+							transition={{ duration: 0.2 }}
+						>
+							<BasketWrapper refOpen={ref} fnBasketHeader={fnBasketHeader} />
+						</motion.div>
 					)}
 				</AnimatePresence>,
 				document.body
