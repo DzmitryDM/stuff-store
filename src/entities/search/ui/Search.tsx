@@ -18,7 +18,7 @@ const refSearch = useRef(null)
 
 	return (
 		<>
-			<AnimatePresence>
+		
 				{isSearch && (
 					<motion.div
 						initial={{ opacity: 0 }}
@@ -44,7 +44,7 @@ const refSearch = useRef(null)
 						</motion.div>
 					</motion.div>
 				)}
-			</AnimatePresence>
+				
 			<SearchInput searchVisible={styles.searchHidden} />
 		</>
 	)
