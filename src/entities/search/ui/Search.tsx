@@ -20,19 +20,19 @@ const refSearch = useRef(null)
 		<>
 		
 				{isSearch && (
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-						transition={{ duration: 0.2 }}
+					<div
+						// initial={{ opacity: 0 }}
+						// animate={{ opacity: 1 }}
+						// exit={{ opacity: 0 }}
+						// transition={{ duration: 0.2 }}
 						className={styles.searchWrapper}
 					>
-						<motion.div
+						<div
 						ref={refSearch}
-							initial={{ y: -100 }}
-							animate={{ y: 0 }}
-							exit={{ y: -100 }}
-							transition={{ duration: 0.3 }}
+							// initial={{ y: -100 }}
+							// animate={{ y: 0 }}
+							// exit={{ y: -100 }}
+							// transition={{ duration: 0.3 }}
 							className={styles.searchContainer}
 						>
 							<SearchInput searchVisible={styles.searchVisible} />
@@ -41,8 +41,8 @@ const refSearch = useRef(null)
 								onClick={openSearch}
 								size='30'
 							/>
-						</motion.div>
-					</motion.div>
+						</div>
+					</div>
 				)}
 				
 			<SearchInput searchVisible={styles.searchHidden} />
