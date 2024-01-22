@@ -3,7 +3,6 @@ import { FaCartShopping } from 'react-icons/fa6'
 import { useCart } from './useCart'
 import { AnimatePresence, motion } from 'framer-motion'
 import { createPortal } from 'react-dom'
-
 import { BasketWrapper } from '../../../features/basketWarapper'
 
 
@@ -21,13 +20,14 @@ const fnBasketHeader = {
 				{products}
 				<FaCartShopping size='27px' />
 			</div>
-
-				<AnimatePresence initial={false}>
+			{createPortal(
+				<AnimatePresence>
 					{isOpen && (
 						<BasketWrapper refOpen={ref} fnBasketHeader={fnBasketHeader} />
 					)}
-				</AnimatePresence>
-			
+				</AnimatePresence>,
+				document.body
+			)}
 		</>
 	)
 }
