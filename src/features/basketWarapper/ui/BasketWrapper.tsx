@@ -24,11 +24,11 @@ export function BasketWrapper({ refOpen, fnBasketHeader }: IBasketWrapper) {
 			exit={{ opacity: 0 }}
 			transition={{ duration: 0.2 }}
 		>
-			{/* <div ref={refOpen} className={styles.basket}>
+			<div ref={refOpen} className={styles.basket}>
 				<BasketHeader {...fnBasketHeader} />
 				<BasketList />
 				<BasketFooter />
-			</div> */}
+			</div>
 		</motion.div>
 	)
 }

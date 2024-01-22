@@ -3,9 +3,7 @@ import { FaCartShopping } from 'react-icons/fa6'
 import { useCart } from './useCart'
 import { AnimatePresence, motion } from 'framer-motion'
 import { createPortal } from 'react-dom'
-import { BasketHeader } from '../../../entities/basket-header'
-import { BasketFooter } from '../../../entities/basket-footer'
-import { BasketList } from '../../../features/basketList'
+
 import { BasketWrapper } from '../../../features/basketWarapper'
 
 
@@ -23,14 +21,13 @@ const fnBasketHeader = {
 				{products}
 				<FaCartShopping size='27px' />
 			</div>
-			{createPortal(
+
 				<AnimatePresence>
 					{isOpen && (
 						<BasketWrapper refOpen={ref} fnBasketHeader={fnBasketHeader} />
 					)}
-				</AnimatePresence>,
-				document.body
-			)}
+				</AnimatePresence>
+			
 		</>
 	)
 }
