@@ -34,7 +34,7 @@ const openSearch=()=>{
 						size='27'
 					/>
 					<Search  isSearch={isOpenSearch} openSearch={openSearch} />
-								f
+								
 					<AuthUser />
 					<ThemeSwitcher />
 					<Cart />
