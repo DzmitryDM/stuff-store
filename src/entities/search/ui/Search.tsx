@@ -18,7 +18,7 @@ const refSearch = useRef(null)
 
 	return (
 		<>
-		
+			<AnimatePresence>
 				{isSearch && (
 					<div
 						// initial={{ opacity: 0 }}
@@ -27,12 +27,12 @@ const refSearch = useRef(null)
 						// transition={{ duration: 0.2 }}
 						className={styles.searchWrapper}
 					>
-						<div
-						ref={refSearch}
-							// initial={{ y: -100 }}
-							// animate={{ y: 0 }}
-							// exit={{ y: -100 }}
-							// transition={{ duration: 0.3 }}
+						<motion.div
+							ref={refSearch}
+							initial={{ y: -100 }}
+							animate={{ y: 0 }}
+							exit={{ y: -100 }}
+							transition={{ duration: 0.3 }}
 							className={styles.searchContainer}
 						>
 							<SearchInput searchVisible={styles.searchVisible} />
@@ -41,10 +41,10 @@ const refSearch = useRef(null)
 								onClick={openSearch}
 								size='30'
 							/>
-						</div>
+						</motion.div>
 					</div>
 				)}
-				
+			</AnimatePresence>
 			<SearchInput searchVisible={styles.searchHidden} />
 		</>
 	)
