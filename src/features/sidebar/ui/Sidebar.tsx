@@ -1,20 +1,11 @@
 import styles from './Sidebar.module.scss'
 import { AnimatePresence, motion } from 'framer-motion'
 import { SidebarList } from '../../sidebarList'
-import { useSelector } from 'react-redux'
-import {
-	selectOpenBurger,
-	setOpenMenuBurger,
-} from '../../../shared/model/header-slice/headerSlice'
-import { useRef } from 'react'
-import { useAppDispatch } from '../../../shared/hooks-redux/hooksRedux'
-import { useClickOutside } from '../../../shared/hooks/useClickOutside'
+import { useSidebar } from './useSidebar'
 
 export function Sidebar() {
-	const refOutside = useRef(null)
-	const dispatch = useAppDispatch()
-	const isOpenMenuBurger = useSelector(selectOpenBurger)
-	useClickOutside(refOutside, () => dispatch(setOpenMenuBurger()))
+
+const [isOpenMenuBurger, refOutside] = useSidebar()
 
 	return (
 		<>
@@ -29,17 +20,17 @@ export function Sidebar() {
 						className={styles.outside}
 					>
 						<motion.section
-							ref={refOutside}
 							key='sidebar'
 							initial={{ x: -100 }}
 							animate={{ x: 0 }}
 							exit={{ x: -100 }}
 							transition={{ duration: 0.2 }}
+							ref={refOutside}
 							className={styles.sidebar}
 						>
 							<SidebarList sidebarVisible={styles.sidebarVisible} />
 						</motion.section>
-					</motion.div>
+					 </motion.div>
 				)}
 			</AnimatePresence>
 			<SidebarList sidebarVisible={styles.sidebarHidden} />

@@ -8,7 +8,7 @@
 	transition: 0.2s;
 	white-space: nowrap;
 	&:hover {
-		background-color: #542d94;
+		background-color:var(	--colors-bt-hover);
 		transition: 0.2s;
 	}
 	&:active {

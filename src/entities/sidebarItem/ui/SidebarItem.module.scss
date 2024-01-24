@@ -1,14 +1,12 @@
-.sidebarColor{
-	color:var(--colors-text);
+.sidebarColor {
+	color: rgba(255, 255, 255, 0.37);
 	transition: 0.5s;
 	padding: 0 0.4rem;
-	&:hover{
-		background-color: var(--colors-ui-base);
-	
-		border-radius: var(--radii);
+	&:hover {
+		color: var(--colors-text);
 		transition: 0.5s;
 	}
 }
-.active{
-color:var(--colors-bt)
+.active {
+	color: var(--colors-text);
 }

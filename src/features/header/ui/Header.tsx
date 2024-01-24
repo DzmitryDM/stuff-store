@@ -7,11 +7,7 @@ import { Search } from '../../../entities/search'
 import { Cart } from '../../../pages/basket/index'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { BsSearch } from 'react-icons/bs'
-import { log } from 'console'
-import { useState } from 'react'
 import { useHeader } from './useHeader'
-import { Sidebar } from '../../sidebar'
-import { AnimatePresence } from 'framer-motion'
 
 				export function Header() {
 

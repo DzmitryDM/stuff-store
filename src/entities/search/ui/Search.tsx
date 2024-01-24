@@ -7,13 +7,13 @@ import { useRef } from 'react'
 
 interface ISearch {
 	isSearch: boolean
-	openSearch: ()=>void
+	openSearch: () => void
 }
 
 export function Search({ isSearch, openSearch }: ISearch) {
-const refSearch = useRef(null)
+	const refSearch = useRef(null)
 
-	useClickOutside(refSearch,openSearch)
+	useClickOutside(refSearch, openSearch)
 
 	return (
 		<>
@@ -36,7 +36,7 @@ const refSearch = useRef(null)
 							ref={refSearch}
 							className={styles.searchContainer}
 						>
-							<SearchInput searchVisible={styles.searchVisible} />
+							<SearchInput searchVisible={styles.searchVisible} closeSearch={openSearch} isSearch={isSearch} />
 							<MdClear
 								className={styles.searchVisible}
 								onClick={openSearch}

@@ -7,11 +7,13 @@ import { Link } from 'react-router-dom'
 
 export function ProductsItem(product: Products) {
 	
-	const { id = '', images = [], title, category = {}, price } = product
+	const { id = '', images = [],  category = {}, price } = product
 
 
-	const handleOrder =
+	const[ handleOrder,title] =
 		useProductsItem(product, id)
+
+
 
 
 	return (

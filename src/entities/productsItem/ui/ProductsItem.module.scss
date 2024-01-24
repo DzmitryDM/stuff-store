@@ -13,6 +13,7 @@
 	box-shadow: var(--shadow);
 }
 .cardTitle {
+	word-wrap: break-word;
 	font-size: var(--fs-md);
 	font-weight: var(--fw-normal);
 }

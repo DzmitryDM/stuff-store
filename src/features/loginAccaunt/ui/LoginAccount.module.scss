@@ -55,9 +55,14 @@ font-weight: var(--fw-light);
 
 .register {
   margin-left: 0.4rem;
-  color:var(--colors-bt);
+  color:rgba(255, 255, 255, 0.37);
  font-weight: var(--fw-normal);
  cursor: pointer;
+ transition: 0.3s;
+ 	&:hover {
+		color: var(--colors-text);
+		transition: 0.3s;
+	}
 }
 .errorAuth {
 	color: rgb(241, 68, 10);

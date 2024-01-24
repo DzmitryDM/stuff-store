@@ -6,12 +6,19 @@ import { useSearch } from '../../searchInput/ui/useSearch'
 import { AnimatePresence, motion } from 'framer-motion'
 
 interface ISearchVisible {
-	searchVisible:string
+	searchVisible: string
+	isSearch?: boolean
+	closeSearch?: () => void
 }
 
-export function SearchInput({searchVisible}:ISearchVisible) {
+export function SearchInput({
+	searchVisible,
+	isSearch=false,
+	closeSearch = () => {},
+}: ISearchVisible) {
+	
+	const searchStyles = styles.inputWrapper + ' ' + searchVisible
 
-const searchStyles = styles.inputWrapper + ' ' + searchVisible
 
 	const [
 		products,
@@ -23,7 +30,7 @@ const searchStyles = styles.inputWrapper + ' ' + searchVisible
 		handleReset,
 		handleOpen,
 		handleSearch,
-	] = useSearch()
+	] = useSearch(isSearch, closeSearch)
 
 	return (
 		<div className={searchStyles}>

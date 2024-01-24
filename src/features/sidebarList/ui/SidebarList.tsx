@@ -18,7 +18,7 @@ export  function SidebarList({ sidebarVisible }:ISidebarVisible) {
 
 
 	return (
-		<motion.section className={sidebarStyles}>
+		<section className={sidebarStyles}>
 			<div className={styles.categories}>
 				<h3>Categories</h3>
 				{data
@@ -29,6 +29,6 @@ export  function SidebarList({ sidebarVisible }:ISidebarVisible) {
 			</div>
 			<div className={styles.border}></div>
 			{idProducts && <FilterByPrice />}
-		</motion.section>
+		</section>
 	)
 }

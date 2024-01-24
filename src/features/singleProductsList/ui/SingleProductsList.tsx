@@ -2,7 +2,8 @@ import { useParams } from 'react-router-dom'
 import { useGetSingleProductsQuery } from '../../../shared/api'
 import styles from './SingleProductsList.module.scss'
 import { SingleProductElements } from '../../../entities/singleProductElements'
-import { SingleProductsPhoto } from '../../../entities/singleProductsPhoto'
+// import { SingleProductsPhoto } from '../../../entities/singleProductsPhoto'
+import { SingleProductsPhoto } from '../../../entities/singleProductsPhoto/ui/SingleProductsPhoto copy'
 
 export function SingleProductList() {
 	const { idProduct } = useParams<{ idProduct: any }>()
