@@ -12,7 +12,7 @@ export function ProductsItem(product: Products) {
 	const scrollTo = () => {
 		window.scrollTo({
 			top: 0,
-			behavior: 'smooth',
+			behavior: 'auto',
 		})
 	}
 
