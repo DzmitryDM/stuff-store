@@ -5,7 +5,7 @@ import { BasketItem } from '../../../entities/basketItem'
 export function BasketList() {
 	const products = useSelector(selectBasket)
 
-  console.log('head')
+
 
 	return (
 		<>

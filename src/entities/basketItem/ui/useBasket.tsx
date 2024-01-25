@@ -10,7 +10,8 @@ export const useBasket = (): [
 	(id: string) => void,
 	() => void,
 	(id: string) => void,
-	(id: string) => void
+	(id: string) => void,
+	(title:string)=>string
 ] => {
 	
 	const dispatch = useAppDispatch()
@@ -31,5 +32,11 @@ export const useBasket = (): [
 		dispatch(decrementProduct(id))
 	}
 
-	return [deletedProduct, closeCart, incrementByProduct, decrementByProduct]
+const titleBasket = (title:string)=>
+	title?.split(' ')
+	.map(el => (el.length > 11 ? el.slice(0, 11) : el))
+	.join(' ')
+
+
+	return [deletedProduct, closeCart, incrementByProduct, decrementByProduct,titleBasket]
 }

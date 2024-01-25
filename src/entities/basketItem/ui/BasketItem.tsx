@@ -10,13 +10,21 @@ import { memo } from 'react'
 export  function BasketItem({
 	id = '',
 	images = [],
-	title,
+	title= '',
 	category = {},
 	price,
 	quantity,
 }: Products) {
-	const [deletedProduct, closeCart, incrementByProduct, decrementByProduct] =
-		useBasket()
+	const [
+		deletedProduct,
+		closeCart,
+		incrementByProduct,
+		decrementByProduct,
+		titleBasket,
+	] = useBasket()
+
+	const titleBas =titleBasket(title)
+
 
 	return (
 		<section className={styles.basketContainer}>
@@ -25,7 +33,7 @@ export  function BasketItem({
 			</Link>
 			<div className={styles.titleCategoriesWrapper}>
 				<div className={styles.wrapperTitle}>
-					<div className={styles.title}>{title} </div>
+					<div className={styles.title}>{titleBas} </div>
 					<div className={styles.categories}>{category.name}</div>
 				</div>
 			</div>
