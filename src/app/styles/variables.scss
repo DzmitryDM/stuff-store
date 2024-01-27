@@ -6,8 +6,8 @@
 	--fw-lightPlus: 500;
 	--fw-normal: 600;
 	--fw-bold: 800;
-	--colors-bt:rgba(255,255,255,0.1);
-	
+	--colors-bt: rgba(255, 255, 255, 0.1);
+
 	/* Other */
 	--radii: 0.5rem;
 }
@@ -16,17 +16,17 @@ body[data-theme='dark'] {
 	--colors-text: hsl(0, 0%, 100%);
 	--colors-bg: hsl(0, 0%, 11%);
 	--colors-ui-base: #151515;
-	--colors-border:hsl(0, 0%, 100%);
+	--colors-border: hsl(0, 0%, 100%);
 	--shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
-	--colors-bt:rgba(255,255,255,0.1);
-	--colors-bt-hover: hsla(0,0%,53.3%,0.4);
+	--colors-bt: rgba(255, 255, 255, 0.1);
+	--colors-bt-hover: hsla(0, 0%, 53.3%, 0.4);
 }
 body[data-theme='light'] {
 	--colors-text: hsl(200, 15%, 8%);
 	--colors-bg: hsl(0, 0%, 97%);
 	--colors-ui-base: hsl(0, 0%, 100%);
---colors-border:hsl(200, 15%, 8%);
+	--colors-border: hsl(200, 15%, 8%);
 	--shadow: rgba(58, 91, 123, 0.2) 0px 8px 24px;
-	--colors-bt:#dbdbdb;
-	--colors-bt-hover: hsla(0,0%,53.3%,0.4);
+	--colors-bt: #dbdbdb;
+	--colors-bt-hover: hsla(0, 1%, 37%, 0.4);
 }

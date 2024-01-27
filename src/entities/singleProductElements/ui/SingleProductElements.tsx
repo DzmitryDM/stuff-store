@@ -5,15 +5,16 @@ import { useAppDispatch } from '../../../shared/hooks-redux/hooksRedux'
 import {
 	addOrder
 } from '../../../shared/model'
+import { usePopPupBasketMessage } from '../../../shared/hooks/usePopPupBasketMessage'
 
 export function SingleProductElements(product: Products) {
 	const dispatch = useAppDispatch()
 	const { id, images, title, category, description, price } = product
+	const [alertName, closeName] = usePopPupBasketMessage()
 
 	const handleOrder = () => {
 		dispatch(addOrder(product))
 	}
-
 
 	return (
 		<div className={styles.productList}>
@@ -24,7 +25,7 @@ export function SingleProductElements(product: Products) {
 				<div className={styles.cardPrice}>{price}$</div>
 				<Button onClick={handleOrder}>Add to card</Button>
 			</div>
-			<PopPupBasket />
+			<PopPupBasket alertName={alertName} callback={closeName} />
 		</div>
 	)
 }

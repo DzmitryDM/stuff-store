@@ -1,6 +1,7 @@
 .wrapperCard {
 	border-radius: var(--radii);
 	background-color: var(--colors-bg);
+	box-shadow: var(--shadow);
 }
 .cardImage {
 	cursor: pointer;
@@ -28,7 +29,7 @@
 	justify-content: space-between;
 }
 .cardPrice {
-	color: var(--colors-bt);
+	color: var(--colors-text);
 	align-self: center;
 	font-size: 25px;
 	font-weight: var(--fw-lightPlus);

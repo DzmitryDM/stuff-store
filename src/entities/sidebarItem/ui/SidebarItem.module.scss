@@ -1,5 +1,5 @@
 .sidebarColor {
-	color: rgba(255, 255, 255, 0.37);
+	color: var(--colors-bt-hover);
 	transition: 0.5s;
 	padding: 0 0.4rem;
 	&:hover {
@@ -10,3 +10,4 @@
 .active {
 	color: var(--colors-text);
 }
+

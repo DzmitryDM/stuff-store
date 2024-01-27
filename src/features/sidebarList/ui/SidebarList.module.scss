@@ -1,6 +1,8 @@
 .sidebar {
 	grid-area: sidebar;
 	background-color: var(--colors-bg);
+		box-shadow: var(--shadow);
+
 	padding: 1rem;
 	border-radius: 0.7rem;
 	z-index: 4;

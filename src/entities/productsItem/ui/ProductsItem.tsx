@@ -3,10 +3,14 @@ import { Products } from '../../../shared/type/products'
 import { Button, PopPupBasket } from '../../../shared/ui'
 import { useProductsItem } from './useProductsItem'
 import { Link } from 'react-router-dom'
+import { addAlertName, selectBasketPopPup } from '../../../shared/model'
+import { useAppDispatch } from '../../../shared/hooks-redux/hooksRedux'
+import { useSelector } from 'react-redux'
+import { usePopPupBasketMessage } from '../../../shared/hooks/usePopPupBasketMessage'
 
 export function ProductsItem(product: Products) {
 	const { id = '', images = [], category = {}, price } = product
-
+	const [alertName, closeName] = usePopPupBasketMessage()
 	const [handleOrder, title] = useProductsItem(product, id)
 
 	const scrollTo = () => {
@@ -34,7 +38,7 @@ export function ProductsItem(product: Products) {
 					<Button onClick={handleOrder}>Add to cart</Button>
 				</div>
 			</div>
-			<PopPupBasket />
+			<PopPupBasket alertName={alertName} callback={closeName} />
 		</div>
 	)
 }

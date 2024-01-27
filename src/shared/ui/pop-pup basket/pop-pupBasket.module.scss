@@ -1,25 +1,24 @@
 .popPup {
 	position: fixed;
-top: 88px;
-right: 30px;
+	top: 88px;
+	right: 30px;
 	padding: 0.8rem;
 	border-radius: var(--radii);
-	background-color:var(--colors-bg);
+	background-color: var(--colors-bg);
 	color: var(--colors-text);
-opacity: 0.6;
+	opacity: 0.6;
 	max-height: 300px;
 	max-width: 300px;
 }
 .cardAlertName {
-margin-right: 0.5rem;
-  font-weight: var(--fw-normal);
+	margin-right: 0.5rem;
+	font-weight: var(--fw-normal);
 }
 
-@media(max-width:768px) {
-	.popPup{
-position: fixed;
-top: 55px;
-right: 15px;
+@media (max-width: 768px) {
+	.popPup {
+		position: fixed;
+		top: 55px;
+		right: 15px;
 	}
-	
 }
