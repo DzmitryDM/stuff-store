@@ -19,17 +19,7 @@ const [isOpenMenuBurger, refOutside] = useSidebar()
 						transition={{ duration: 0.2 }}
 						className={styles.outside}
 					>
-						<motion.section
-							key='sidebar'
-							initial={{ x: -100 }}
-							animate={{ x: 0 }}
-							exit={{ x: -100 }}
-							transition={{ duration: 0.2 }}
-							ref={refOutside}
-							className={styles.sidebar}
-						>
-							<SidebarList sidebarVisible={styles.sidebarVisible} />
-						</motion.section>
+							<SidebarList refOutside={refOutside} sidebarVisible={styles.sidebarVisible} />
 					 </motion.div>
 				)}
 			</AnimatePresence>

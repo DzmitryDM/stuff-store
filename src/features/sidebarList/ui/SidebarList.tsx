@@ -7,18 +7,25 @@ import { FilterByPrice } from '../../../entities/filter-by-price'
 
 interface ISidebarVisible {
 	sidebarVisible: string
+	refOutside?: React.Ref<HTMLElement>
 }
 
-export  function SidebarList({ sidebarVisible }:ISidebarVisible) {
-
-  const sidebarStyles = styles.sidebar + ' ' + sidebarVisible
+export function SidebarList({ sidebarVisible, refOutside }: ISidebarVisible) {
+	const sidebarStyles = styles.sidebar + ' ' + sidebarVisible
 
 	const { idProducts } = useParams<string>()
 	const { data = [] } = useGetAllCategoriesQuery()
 
-
 	return (
-		<section className={sidebarStyles}>
+		<motion.section
+			key='sidebar'
+			initial={{ x: -100 }}
+			animate={{ x: 0 }}
+			exit={{ x: -100 }}
+			transition={{ duration: 0.1 }}
+			 ref={refOutside}
+			className={sidebarStyles}
+		>
 			<div className={styles.categories}>
 				<h3>Categories</h3>
 				{data
@@ -29,6 +36,6 @@ export  function SidebarList({ sidebarVisible }:ISidebarVisible) {
 			</div>
 			<div className={styles.border}></div>
 			{idProducts && <FilterByPrice />}
-		</section>
+		</motion.section>
 	)
 }

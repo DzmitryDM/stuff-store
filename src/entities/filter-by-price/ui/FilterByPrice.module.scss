@@ -1,3 +1,11 @@
+.priceWrapper {
+  
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+  justify-items: start;
+  max-width: 17rem;
+}
 
 
 h3{
@@ -5,17 +13,13 @@ h3{
   font-size: var(--fs-md);
   font-weight: var(--fw-lightPlus);
 }
-.priceWrapper {
-  
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  justify-items: center;
-}
 .price {
 	color: var(--colors-text);
 	max-width: 7.2rem;
   margin-right: 0.3rem;
+  margin-bottom: 0.8rem;
 }
+
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {

@@ -15,7 +15,7 @@ export const useProductsItem = (
 		dispatch(addOrder(product))
 	}
 
-	const { title } = product
+	const { title,price } = product
 
 	const titleArr = title
 		?.split(' ')

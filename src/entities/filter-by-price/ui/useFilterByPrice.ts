@@ -5,7 +5,6 @@ import {
 	clearAlertName,
 	getFiltersPrice,
 } from '../../../shared/model/filters-slice/filtersSlice'
-import { useDebounce } from '../../../shared/hooks/useDebounce'
 
 type handleEvent = React.ChangeEventHandler<HTMLInputElement>
 type handleKeyBoardEvent = React.KeyboardEventHandler<HTMLInputElement>
@@ -15,7 +14,8 @@ export const useFilterByPrice = (): [
 	string,
 	handleEvent,
 	handleKeyBoardEvent,
-	React.RefObject<HTMLInputElement>
+	React.RefObject<HTMLInputElement>,
+	handleKeyBoardEvent
 ] => {
 	const { idProducts } = useParams<string>()
 
@@ -48,9 +48,13 @@ export const useFilterByPrice = (): [
 	const max = Number(priceMax)
 	const id = Number(idProducts)
 
-	useEffect(() => {
+	const handleFilterPrice: handleKeyBoardEvent = e => {
+		if (e.key == 'Enter') {
+			dispatch(getFiltersPrice({ min, max, id }))
+		}
 		dispatch(getFiltersPrice({ min, max, id }))
-	}, [min, max, idProducts])
+		clearInputField()
+	}
 
 	useEffect(() => {
 		return () => {
@@ -59,5 +63,12 @@ export const useFilterByPrice = (): [
 		}
 	}, [idProducts])
 
-	return [priceMin, priceMax, handleChangePrice, handleKey, ref]
+	return [
+		priceMin,
+		priceMax,
+		handleChangePrice,
+		handleKey,
+		ref,
+		handleFilterPrice,
+	]
 }

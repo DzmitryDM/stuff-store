@@ -3,9 +3,6 @@ import { Products } from '../../../shared/type/products'
 import { Button, PopPupBasket } from '../../../shared/ui'
 import { useProductsItem } from './useProductsItem'
 import { Link } from 'react-router-dom'
-import { addAlertName, selectBasketPopPup } from '../../../shared/model'
-import { useAppDispatch } from '../../../shared/hooks-redux/hooksRedux'
-import { useSelector } from 'react-redux'
 import { usePopPupBasketMessage } from '../../../shared/hooks/usePopPupBasketMessage'
 
 export function ProductsItem(product: Products) {
@@ -35,7 +32,9 @@ export function ProductsItem(product: Products) {
 				<div>{category.name}</div>
 				<div className={styles.cardBottom}>
 					<div className={styles.cardPrice}>{price}$</div>
+					<div className={styles.btn}>
 					<Button onClick={handleOrder}>Add to cart</Button>
+					</div>
 				</div>
 			</div>
 			<PopPupBasket alertName={alertName} callback={closeName} />

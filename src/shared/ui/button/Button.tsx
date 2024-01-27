@@ -2,9 +2,10 @@ import styles from './Button.module.scss'
 
 type Button = {
 	children: React.ReactNode
-	onClick?: () => void
+	onClick?: any
 	className?: string
 	disabled?: boolean
+	onKeyDown?:any
 }
 
 export function Button({ children, ...props }: Button) {

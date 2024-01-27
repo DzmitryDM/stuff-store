@@ -1,11 +1,17 @@
 import styles from './FilterByPrice.module.scss'
-import { Input } from '../../../shared/ui'
+import { Button, Input } from '../../../shared/ui'
 import { useFilterByPrice } from './useFilterByPrice'
-import { memo } from 'react'
 
-export const FilterByPrice= memo( function FilterByPrice() {
-	const [priceMin, priceMax, handleChangePrice, handleKey, ref] =
-		useFilterByPrice()
+export function FilterByPrice() {
+	const [
+		priceMin,
+		priceMax,
+		handleChangePrice,
+		handleKey,
+		ref,
+		handleFilterPrice,
+	] = useFilterByPrice()
+console.log(priceMax);
 
 	return (
 		<div className={styles.filter}>
@@ -30,6 +36,9 @@ export const FilterByPrice= memo( function FilterByPrice() {
 					value={priceMax}
 				/>
 			</div>
+			<Button onKeyDown={handleFilterPrice} onClick={handleFilterPrice}>
+				Apply
+			</Button>
 		</div>
 	)
-})
+}

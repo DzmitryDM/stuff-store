@@ -8,9 +8,7 @@
 	z-index: 4;
 }
 @media(max-width:810px){
-.sidebar{
-// display: none;
-}
+
 }
 h3{
 	font-size: 20px;
@@ -36,7 +34,9 @@ font-weight: var(--fw-normal);
 	top: 0;
 	left: 0rem;
 	height: 100%;
+	width: 70%;
 	border-radius: 0rem 0.7rem 0.7rem 0rem;
+	z-index: 5;
 }
 .sidebarMobile {
 	background-color:  var(--colors-bg);
