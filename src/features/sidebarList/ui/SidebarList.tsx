@@ -19,9 +19,9 @@ export function SidebarList({ sidebarVisible, refOutside }: ISidebarVisible) {
 	return (
 		<motion.section
 			key='sidebar'
-			initial={{ x: -100 }}
+			initial={{ x: -1000 }}
 			animate={{ x: 0 }}
-			exit={{ x: -100 }}
+			exit={{ x: -1000 }}
 			transition={{ duration: 0.1 }}
 			 ref={refOutside}
 			className={sidebarStyles}

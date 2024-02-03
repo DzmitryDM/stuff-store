@@ -3,9 +3,10 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { SidebarList } from '../../sidebarList'
 import { useSidebar } from './useSidebar'
 
-export function Sidebar() {
 
-const [isOpenMenuBurger, refOutside] = useSidebar()
+
+export function Sidebar() {
+	const [isOpenMenuBurger, refOutside] = useSidebar()
 
 	return (
 		<>
@@ -19,8 +20,11 @@ const [isOpenMenuBurger, refOutside] = useSidebar()
 						transition={{ duration: 0.2 }}
 						className={styles.outside}
 					>
-							<SidebarList refOutside={refOutside} sidebarVisible={styles.sidebarVisible} />
-					 </motion.div>
+						<SidebarList
+							refOutside={refOutside}
+							sidebarVisible={styles.sidebarVisible}
+						/>
+					</motion.div>
 				)}
 			</AnimatePresence>
 			<SidebarList sidebarVisible={styles.sidebarHidden} />

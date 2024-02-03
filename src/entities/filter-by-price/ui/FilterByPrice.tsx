@@ -11,7 +11,6 @@ export function FilterByPrice() {
 		ref,
 		handleFilterPrice,
 	] = useFilterByPrice()
-console.log(priceMax);
 
 	return (
 		<div className={styles.filter}>

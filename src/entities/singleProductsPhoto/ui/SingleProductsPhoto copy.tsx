@@ -1,8 +1,11 @@
-import {  useState } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { wrap } from 'framer-motion'
 import { Products } from '../../../shared/type/products'
 import styles from './SingleProductsPhoto.module.scss'
+import { useNavigate } from 'react-router-dom'
+import { useAppDispatch } from '../../../shared/hooks-redux/hooksRedux'
+import { setImages } from '../../../shared/model/header-slice/headerSlice'
 
 const variants = {
 	enter: (direction: number) => {
@@ -31,14 +34,22 @@ const swipePower = (offset: number, velocity: number) => {
 }
 
 export const SingleProductsPhoto = ({ images = [] }: Products) => {
+	const dispatch = useAppDispatch()
 	const [[page, direction], setPage] = useState([0, 0])
+	const navigate = useNavigate()
 
-	
 	const imageIndex = wrap(0, images.length, page)
 
 	const paginate = (newDirection: number) => {
 		setPage([page + newDirection, newDirection])
 	}
+
+	const imageOrig = () => {
+		navigate('/imagesOriginals')
+		dispatch(setImages(images[imageIndex]))
+	}
+
+
 
 	return (
 		<div className={styles.photoContainer}>
@@ -47,6 +58,7 @@ export const SingleProductsPhoto = ({ images = [] }: Products) => {
 					className={styles.singleImage}
 					key={page}
 					src={images[imageIndex]}
+					onClick={imageOrig}
 					custom={direction}
 					variants={variants}
 					initial='enter'

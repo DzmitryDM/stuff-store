@@ -36,7 +36,6 @@ export const useSearch = (
 	const ref = useRef<HTMLDivElement>(null)
 	useClickOutside(ref, () => setOpen(false))
 
-	console.log(isSearch);
 	
 	const handleReset = () => {
 		if(isSearch){

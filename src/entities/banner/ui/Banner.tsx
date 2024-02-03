@@ -1,14 +1,10 @@
-import Box from '../../../shared/ui/icon/Box.png'
-import computer from '../../../shared/ui/icon/computer.png'
+import MacBookAir13 from '../../../shared/ui/icon/MacBookAir13.jpg'
 import styles from './Banner.module.scss'
 
 export function Banner() {
 	return (
-		<section className={styles.home}>
-			<img className={styles.main_images} src={Box} alt='img1' />
-			<div className={styles.images}>
-				<img className={styles.images2} src={computer} alt='img2' />
-			</div>
+		<section className={styles.banner}>
+			<img className={styles.main_images} src={MacBookAir13} alt='img1' />
 		</section>
 	)
 }

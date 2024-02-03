@@ -13,11 +13,11 @@ export const useHeader = (): [boolean, boolean, () => void, () => void] => {
 	const dispatch = useAppDispatch()
 	const isOpenMenu = useAppSelector(selectOpenBurger)
 
-	const handleMenuBurger = () => {
+	const toggleMenuBurger = () => {
 		dispatch(setOpenMenuBurger())
 	}
 	const handleSearch = () => {
 		setOpenSearch(!isOpenSearch)
 	}
-	return [isOpenSearch, isOpenMenu, handleMenuBurger, handleSearch]
+	return [isOpenSearch, isOpenMenu, toggleMenuBurger, handleSearch]
 }

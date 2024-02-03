@@ -5,6 +5,7 @@ import {
 	clearAlertName,
 	getFiltersPrice,
 } from '../../../shared/model/filters-slice/filtersSlice'
+import { setOpenMenuBurger } from '../../../shared/model/header-slice/headerSlice'
 
 type handleEvent = React.ChangeEventHandler<HTMLInputElement>
 type handleKeyBoardEvent = React.KeyboardEventHandler<HTMLInputElement>

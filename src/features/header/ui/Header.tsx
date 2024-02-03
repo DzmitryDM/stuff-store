@@ -11,14 +11,14 @@ import { useHeader } from './useHeader'
 
 				export function Header() {
 
-const [isOpenSearch, isOpenMenu, handleMenuBurger, handleSearch] = useHeader()
+const [isOpenSearch, isOpenMenu, toggleMenuBurger, handleSearch] = useHeader()
 
 	return (
 		<header className={styles.headerContainer}>
 			<div className={styles.container}>
 				<div className={styles.flex_header}>
 					<RxHamburgerMenu
-						onClick={handleMenuBurger}
+						onClick={toggleMenuBurger}
 						className={styles.burgerMenu}
 						size='27'
 					/>

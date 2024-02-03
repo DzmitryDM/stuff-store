@@ -4,6 +4,7 @@ import { Root } from './root'
 import { Home } from './home'
 import { SingleProducts } from './singleProducts'
 import { PersonalArea } from './personal-Area/ui/PersonalArea'
+import { ImagesOriginals } from '../shared/ui/imagesOriginals/ImagesOriginals'
 
 export const router = createBrowserRouter([
 	{
@@ -28,5 +29,9 @@ export const router = createBrowserRouter([
 	{
 		path: '/personalArea',
 		element: <PersonalArea />,
+	},
+	{
+		path: '/imagesOriginals',
+		element:<ImagesOriginals/>
 	},
 ])
